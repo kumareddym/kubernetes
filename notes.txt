@@ -94,4 +94,54 @@ Secret:
 you can do it in kubernetes is using another component of kubernetes called volumes.
 -> Storage on local machine
 -> Or remote, outside of the k8s cluster
- 	
+ 
+5.Deployment & Statefullset :
+
+-> Blueprint for "my-app" Pods
+-> You create Deployments
+-> Abstraction of pods
+-> DB can't be replicated via deployment
+ 
+Avoid data inconsistencies and  that mechanism in addition to replicating feature is offered by "Statefullset".
+
+Deployment = for stateLESS Apps
+StateFulSet = for stateFul Apps or databases
+
+Summararized components of k8s:
+
+pod:Abtraction of containers
+Service: Communication
+Ingress: Route traffic into cluster
+Configmap and secret: Extrenal configuration
+Volume: data persistence
+Deployment and statefulset: Replication
+
+Kuberenetes configuration:
+
+-> Declarative
+3 parts of k8s file:
+ Each configuration file has 3 parts
+ 
+1. metadata: Name of the configuration file
+2. Specification: Each components configuration file will have a specification where you basically put every kind of configuration that you want to apply for that component.
+  -> Attributes of "spec" are specific to the kind
+3. Automatically generated and added by kubernetes
+
+ETCD : it holds the current status of any k8s component.
+
+Formate of k8s configuration file :
+
+Syntax : strict indentation
+
+Store the config file with your code or own git repository
+
+-->Minikube & kubectl Local setup :
+ 
+Production cluster setup :
+ 
+1. Multiple master and worker nodes
+2. Separate VM or physical machine
+
+Minikube: Master and node processes run on ONE Machine.
+
+
