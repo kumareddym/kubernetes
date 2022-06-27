@@ -143,6 +143,34 @@ Production cluster setup :
 2. Separate VM or physical machine
 
 Minikube: Master and node processes run on ONE Machine.
-Minikube and kubectl downloaded and I'm unable to install(Stucked here) 
+Minikube and kubectl downloaded and I'm unable to install(Stucked here)
+
+Demo project:- Deploye webapp with mongodb
+ 1. mongo-config.yaml 
+ 2 mongo-secret.yaml - defined mongo username and password 
+ 3. mongo.yaml - deployment & service in one file because they belong together
+ - kind: "deployment"
+main part blue print for ports
+- template : "configuration for pod " has its own metadata and spec section
+- containers : which image?
+               which port?
+- Label : 
+ you can give any k8s components a label
+ lables are key/value pairs that are attached to k8s resources
+ identifier, which should be meaningfull and relavant to users
+examples : 
+
+"release"  : "stable"
+"release" : "dev"
+"env" : " production"
+"env" : "dev"
+
+ label selector:
+
+->Identifies a set of resources
+-> Match all pods with label "app:nginx"
+
+
+
 
 
