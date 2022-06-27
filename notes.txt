@@ -143,5 +143,6 @@ Production cluster setup :
 2. Separate VM or physical machine
 
 Minikube: Master and node processes run on ONE Machine.
+Minikube and kubectl downloaded and I'm unable to install(Stucked here) 
 
 
