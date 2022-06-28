@@ -216,7 +216,8 @@ Pass secret data to mongo deployment:
 3. MongoDB application expects these environment variables:
 
 MONGO_INITDB_ROOT_USERNAME
-MONGO_INITDB_ROOT_PASSWORD
+system info
+
 
 Pass config data to webapp deployment:
 
@@ -235,6 +236,16 @@ NodePort
  Range must be between 30000-32767
 
 Deploy all resources in minikube cluster:
+
+Installing Oracle Virtual Machine, minikube, Kubectl
+
+commands : 
+
+--> systeminfo
+--> kubectl version
+--> minikube start --driver=virtualbox
+
+successfully downloaded and installed kubectl in my machine but i'm facing issue with minikube i'm working on that(virtualization and  VT-X/AMD-v is disabled in my machine)
 
 
 
