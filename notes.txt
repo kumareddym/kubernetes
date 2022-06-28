@@ -206,6 +206,37 @@ Webaapp Deployment & Service:
 
 Creating account in Docker hub
 
+Pass secret data to mongo deployment:
+
+-> we need to pass the secret and configmap data into pods.
+-> starting a mongoDB application 
+1. We need to set : Username and Password
+2. Will generate a new user and set that user's password
+
+3. MongoDB application expects these environment variables:
+
+MONGO_INITDB_ROOT_USERNAME
+MONGO_INITDB_ROOT_PASSWORD
+
+Pass config data to webapp deployment:
+
+Make it external Services:
+
+-type: service type
+
+Default = ClusterIP
+-> an external service
+
+NodePort
+
+-nodePort: Exposes the Services on each nodes IP at a static port
+
+<NodeIP>:<NodePort>
+ Range must be between 30000-32767
+
+Deploy all resources in minikube cluster:
+
+
 
 
 
