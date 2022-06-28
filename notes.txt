@@ -170,6 +170,42 @@ examples :
 ->Identifies a set of resources
 -> Match all pods with label "app:nginx"
 
+Replicas: how many pods you want to create
+
+->You can have multiple YAML configurations within 1 file "---"=
+-kind: "service"
+-name: an atribute name
+
+-selector: select pods to forward the requests to
+
+-ports:
+    -port:  service port
+    - target: container port of deployment
+
+
+
+						Request
+						  |
+						  |port:8080
+						Mongo Service
+						  |
+						  |targetport:27017
+						Pod
+						  ContainerPort:27017
+
+-> Which port forward the request to the pods
+
+Configmap - MongoDB Endpoint
+Secret - MOngo User & pwd
+
+Deployment, Service - MongoDB application with internal service
+
+Deployment , Service - Our own webapp with external service
+
+Webaapp Deployment & Service:
+
+Creating account in Docker hub
+
 
 
 
