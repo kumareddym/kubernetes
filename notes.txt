@@ -247,6 +247,18 @@ commands :
 
 successfully downloaded and installed kubectl in my machine but i'm facing issue with minikube i'm working on that(virtualization and  VT-X/AMD-v is disabled in my machine)
 
+**Different options to use kubernetes:
+
+1. online kubernetes labs
+
+-> Kuberenetes playground
+-> Play with k8s
+-> play with kubernetes classroom
+
+
+2. kubernetes installation tools
+3. cloud based kubernetes service
+
 
 
 
