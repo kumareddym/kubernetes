@@ -320,9 +320,48 @@ Kubernetes networking:--
 
 			suspends the current process until a signal is received. So these containers do nothing at all except sleep untill kubernetes sends them a signal.
 
+	Pod network: Components
+			
+			while two pods communicate with each other with the intra node network or inter node network
+			two types of communication within pod
+
+	components of pod network:
+
+		For every kubernetes node there is a root network namespace, pod network namespace, and Linux network Bridge
+		now each pod has a own network with virtual internet pare connecting with the root network. so these is the basically like pipare with one and rootnetwork and other end in the pod network.
+
+	Pod network: Intra- Node communication: 
+
+		it is basically communication with two different pod on the same node
+		
 2. service
-	
+
+	A srevice is a type of kubernetes resource that is configured to forward request to aset of pods, Services have an IP address and this IP address automatically routes to a healthy pod.
+				
+			Node---------- Node IP : 172.17.8.102
+			 !
+			 !
+
+		      Service---------- Domain Name : service
+			!		IP: 10.2.10.20
+		 ------	!------		Port: 9443
+		!	!	!	Node port: 32001
+	      Pod 1    Pod 2   Pod 3	Protocol: TCP
+		L1	L1	L1
+
+	Service types:
+
+	Cluster IP				Node port				Load balancer					External name 
+
+   --- Exposes the service on a 	     --- Exposes services on		    --- expposes the service externally		     --- Maps the service to the contents of the external
+       cluster-internal IP.			 each nodes's IP at a 			using a cloude provider's load balancer		 name field by returning a CNAME record with its value
+   --- Makes the service only 			 static port.	
+       reachable from within the cluster.    --- A cluster IP service to	    --- service to which the external load balancer  --- No proxying of any kind is set up
+   --- this is the default service type. 	 which node port service		will route, are automatically created
+						 will route, is automatically created 
 3. ingress network
+
+		a collection of rules that allow inbound connections, which can be configured to give service externally through reachable URLs, load balance trafic, or by offereing name-based virtual hosting.
 
 
 
