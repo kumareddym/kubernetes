@@ -259,6 +259,25 @@ successfully downloaded and installed kubectl in my machine but i'm facing issue
 2. kubernetes installation tools
 3. cloud based kubernetes service
 
+Ubuntu-- Oracle VM  VirtualBox :--
+
+open terminal 
+
+commands: 
+	--> sudo apt-get update -y( once successfully updated you system )
+then we need to check all required packages need to check
+	--> sudo apt-get install curl
+once packages done
+	--> sudo apt-get install apt-transport-https 
+if already done apt-get install apt-transport-https virsion
+
+Install Virtual box hyperviser in Ubuntu:-
+
+	--> sudo apt install virtulbox virtualbox-ext-pack
+Virtualbox is already is there
+then we need to check minikube and kubectl
+	
+
 
 
 
