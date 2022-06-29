@@ -277,8 +277,52 @@ Install Virtual box hyperviser in Ubuntu:-
 Virtualbox is already is there
 then we need to check minikube and kubectl
 	
+""NETWORKING IN KUBERNETES""---
 
+Kubernetes cluster:--A cluster is a foumdation of k8s engine. It has various components such as worker nodes, API's, kubelet processes, deployment files
 
+Problems to solve!!:--
+
+1. container-to-container communication
+
+	-- comminication between to container image
+
+2. Pod-to-pod communication
+	-- comminication between to two different pods having various imges and replicas
+
+3. Pod-to-servive communication
+	-- Is how service enables pod to communicate with any other pod
+
+4. External-to-service communication
+	-- Is how external to service communication is how something out of the cluster can communicate something which is inside the cluster
+
+""Requirements of kubernetes model"":--
+
+	Kubernetes model has few fundamental requirements for any networking implementation.
+
+--> all containers can communicate with all other containers without NAt
+--> all nodes can communicate with all containers (and vice-versa) without NAT
+--> the IP that a container sees itself as is the same IP that others see it as
+
+Kubernetes networking:--
+
+	kubernetes is a powerfull platform having many designs choices and to understand the networking in kubernete cluster, you need to understand the communication between pods, service and external world.
+
+1. container and pod
+
+	a pod consist of one or more containers that are colected on the same host, and are configured to share a network stac and other resources such as units.
+
+	Pods: virtual network interface:--
+		
+			Docker can start a container and rather then creationg a new virtual network interface for it, specify that it shares an existing interface.
+	
+	Pods: Pause:--
+
+			suspends the current process until a signal is received. So these containers do nothing at all except sleep untill kubernetes sends them a signal.
+
+2. service
+	
+3. ingress network
 
 
 
