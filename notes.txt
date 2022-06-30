@@ -364,5 +364,10 @@ Kubernetes networking:--
 		a collection of rules that allow inbound connections, which can be configured to give service externally through reachable URLs, load balance trafic, or by offereing name-based virtual hosting.
 
 
+Network plugins :
 
+--> Google compute engine
+--> flannel
+--> Amezan web services
+--> Romana
 
