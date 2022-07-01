@@ -390,3 +390,39 @@ Guided project--2
 
 Create multi-app cluster with ingress & logging
 
+
+Through online :
+
+Interactive tutorial - Deploying an app
+
+Kubectl basic commands:
+
+1. kubectl get nodes --help  - To get the additional info about possible parameters
+2. kubectl version - kubectl is configured to talk to your cluster, kubectl is installed and you can see both client and server versions.
+3. kubectl get nodes - To view the nodes in the cluster
+
+let's deploy our app : 
+
+1. kubectl create deployment kubetnetes-bootcamp -- image=gcr.io/google-samples/kubernetes/bootcamp:v1 - You just deployed your first application by creating a deployment. 
+This performed a few things for you:searched for a suitable node where an instance of the application could be run (we have only 1 available node)
+scheduled the application to run on that Node configured the cluster to reschedule the instance on a new Node when needed
+
+2. kubectl get deployments - To list the deployments 
+
+hands-on : 
+
+kubectl get deployments
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+kubernetes-bootcamp   1/1     1            1
+
+View our app :
+
+--Pods that are running inside Kubernetes are running on a private, isolated network. 
+--By default they are visible from other pods and services within the same kubernetes cluster, 
+--but not outside that network. When we use kubectl, 
+--we're interacting through an API endpoint to communicate with our application.
+--The kubectl command can create a proxy that will forward communications into the cluster-wide, private network. 
+--The proxy can be terminated by pressing control-C and won't show any output while its running.
+--The proxy enables direct access to the API from these terminals.
+--You can see all those APIs hosted through the proxy endpoint. For example, we can query the version directly through the API using the curl command:
+
