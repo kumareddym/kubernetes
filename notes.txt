@@ -371,3 +371,22 @@ Network plugins :
 --> Amezan web services
 --> Romana
 
+"" Coursere for kubernetes ""
+
+Guided project--1
+
+Basic architeture and first deployment in COURSERA:
+
+-> created one deployment.yaml and service.yaml files under k8s-proj folder in VS
+commands:
+1. mkdir k8s-proj - Creating the directory
+2. cd k8s-proj - change directory
+3. kubectl apply -f service.yaml
+4. kubectl get service
+5. kubectl get 
+
+
+Guided project--2
+
+Create multi-app cluster with ingress & logging
+
